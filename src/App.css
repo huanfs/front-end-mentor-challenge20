@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/*container*/
+.App{
+  height:480px;
+  width:280px;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  gap:1em;
+  background-color:var(--VeryDarkBlueCard);
+  border-radius:10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1{
+  width:70%;
+  font-size:18px;
+  color:var(--White);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App p{
+  color:var(--SoftBlue);
+  font-weight:300;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*article className:chart, father of .price and .timeLeft*/
+.App .chart{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.price img, .timeLeft img{
+  height:0.9em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chart .price{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.price h2{
+  font-size:1em;
+  color:var(--Cyan);
+}
+.chart .timeLeft{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.timeLeft h3{
+  font-size:0.8em;
+  color:var(--SoftBlue);
+}
+/*footer*/
+footer{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border-top:1px solid var(--SoftBlue);
+  padding-top:1em;
+}
+footer img{
+  width:30px;
+  border:1px solid var(--White);
+  border-radius:50%;
+}
+footer span{
+  color:var(--White);
+}
+/**hover effects**/
+.App h1:hover, footer span:hover{
+  color:var(--Cyan);
+  cursor:pointer;
 }
